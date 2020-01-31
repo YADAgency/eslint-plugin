@@ -20,14 +20,14 @@ ruleTester.run('styled-components-ensure-units', rule, {
   valid: [
     {
       code:
-        'const CustomView = styled.View`\n position: absolute;\n margin-right: 0;\n margin: 30px;\n width: 100%;\n`',
+        'const CustomView = styled.View`\n position: absolute;\n margin-right: 0;\n margin: 30px;\n width: 100%; padding: -10px;\n`',
     },
   ],
 
   invalid: [
     {
       code:
-        'const CustomView = styled.View`\n position: absolute;\n margin-right: 0;\n margin: 30;\n width: 100;\n`',
+        'const CustomView = styled.View`\n position: absolute;\n margin-right: 0;\n margin: 30;\n width: 100; padding: -10;\n`',
       errors: [
         {
           message: 'Property declaration `margin: 30;` is missing its unit.',
@@ -35,6 +35,10 @@ ruleTester.run('styled-components-ensure-units', rule, {
         },
         {
           message: 'Property declaration `width: 100;` is missing its unit.',
+          type: 'TemplateElement',
+        },
+        {
+          message: 'Property declaration `padding: -10;` is missing its unit.',
           type: 'TemplateElement',
         },
       ],
