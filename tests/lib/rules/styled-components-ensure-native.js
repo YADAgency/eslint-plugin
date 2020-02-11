@@ -39,6 +39,9 @@ ruleTester.run('styled-components-ensure-native', rule, {
     {
       code: "import 'styled-components'",
     },
+    {
+      code: "import { FlattenSimpleInterpolation } from 'styled-components'",
+    },
   ],
 
   invalid: [
@@ -63,6 +66,10 @@ ruleTester.run('styled-components-ensure-native', rule, {
     {
       code: "import  styled, { ThemeContext } from 'styled-components'",
       errors: [
+        {
+          message: ERROR_MSG_NOT_NATIVE,
+          type: 'ImportDeclaration',
+        },
         {
           message: ERROR_MSG_NOT_NATIVE,
           type: 'ImportDeclaration',
