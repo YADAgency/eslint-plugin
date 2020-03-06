@@ -1,6 +1,6 @@
 {
   "name": "@yada/eslint-plugin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Hand crafted rules for the awesome team at YADA",
   "repository": {
     "type": "git",
