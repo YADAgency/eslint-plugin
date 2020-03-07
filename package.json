@@ -1,10 +1,13 @@
 {
-  "name": "@yada/eslint-plugin",
+  "name": "@yadagency/eslint-plugin",
   "version": "0.3.0",
   "description": "Hand crafted rules for the awesome team at YADA",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/YetAnotherDevAgency/eslint-plugin-yada"
+    "url": "https://github.com/YADAgency/eslint-plugin"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "eslint",
